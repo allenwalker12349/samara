@@ -1,1 +1,1 @@
-$(".navigation__search-icon").on("click",function(){$(".search-popup").animate({left:"0%"},350),$(".search-popup__close-btn").on("click",function(n){n.preventDefault(),$(".search-popup").animate({left:"100%"},350)})});
+$(document).ready(function(){$(".slider").slick({})});
