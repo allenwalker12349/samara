@@ -4,34 +4,26 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="owlCarousel/owl.carousel.min.css">
+		<link rel="stylesheet" href="owlCarousel/owl.theme.default.min.css">
+		<link rel="stylesheet" href="jquery-ui/jquery-ui.css">
 		<link rel="stylesheet" href="fonts/fonts.css">
-		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 		<link rel="stylesheet" href="build/css/style.css">
-		<script
-		src="https://code.jquery.com/jquery-3.4.1.min.js"
-		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-		crossorigin="anonymous" defer>
-	</script>
-	<script src="slick/slick.min.js" defer></script>
-	<script src="build/js/script.js" defer></script>
 		<title>Document</title>
 </head>
 <body>
 		<header>
 			<section class="top-contact">
 				<div class="wrapper">
-					<a href="#" class="top-contact__social">соц.сети</a>
-					<p class="top-contact__container">
-						<span class="top-contacts__adres">443100, г. Самара, ул. Галактионовская,132</span>
-						<span class="top-contact__working-hours">Пн-Чт: 08:30 - 17:30, Пт: 8:30 - 16:30, Сб-Вс: выходной</span>
-						<a href="tel:+78462420574" class="top-contact__phone">8 (846) 242-05-74</a>
-					</p>
+					<a href="search-result.html" class="top-contact__social">соц.сети</a>
+					<span class="top-contacts__adres">443100, г. Самара, ул. Галактионовская,132</span>
+					<span class="top-contact__working-hours">Пн-Чт: 08:30 - 17:30, Пт: 8:30 - 16:30, Сб-Вс: выходной</span>
+					<a href="tel:+78462420574" class="top-contact__phone">8 (846) 242-05-74</a>
 					<a href="#" class="visually-impaired">слабовидящим</a>
 				</div>
 			</section>
 			<section class="navigation">
-				<form action="PSOT" class="search-popup">
+				<form action="POST" class="search-popup">
 					<input type="serach" class="navigation__search">
 					<button class="search-popup__close-btn"></button>
 				</form>
@@ -61,64 +53,90 @@
 			</section>
 		</header>
 		<main>
-			<div class="slider">
-				<div><img src="img/Operativka_1.jpg" alt=""></div>
-			</div>
+			<section class="first-screen">
+				<div class="owl-carousel">
+					<div>
+						<div class="gray"></div>
+						<div class="wrapper">
+							<div class="slider__text-content">
+								<h2 class="slider__title">В Администрации города обсудили подготовку к Новогодним праздникам</h2>
+								<p class="slider__description">Руководители профильных Департаментов доложили об организации и проведении Новогодних мероприятий...</p>
+								<div class="slider__button">
+									<a href="#" class="slider__text">Подробнее</a>
+								</div>
+							</div> 
+						</div>
+						<img class="first-screen__slider-img" src="img/Operativka_1.jpg" alt="">
+					</div>
+				</div>
+			</section>
 			<section class="latest-news">
 				<div class="wrapper">
 					<h3 class="latest-news__section-title">Последние новости</h3>
-					<a href="#" class="latest-news__link latest-news__link--active">Новости</a>
-					<a href="#" class="latest-news__link">Объявления</a>
-					<a href="#" class="latest-news__link">Афиша</a>
-					<div class="latest-news__container">
-						<div class="latest-news__item">
-							<div class="blue-layer"></div>
-							<img class="latest-news__img" src="img/image_20.jpg" alt="Фото">
-							<div class="latest-news__text-container">
-								<p class="latest-news__time">12.12.19</p>
-								<h4 class="latest-news__title">В Самаре дети-сироты получили новые квартиры</h4>
-							</div>
+					<div id="tabs">
+						<ul>
+							<li><a href="#fragment-1"class="latest-news__link latest-news__link--active">Новости</a></li>
+							<li><a href="#fragment-2"class="latest-news__link">Объявления</a></li>
+							<li><a href="#fragment-3"class="latest-news__link">Афиша</a></li>
+						</ul>
+						<div id="fragment-1">
+							<div class="latest-news__container">
+								<div class="latest-news__item">
+									<div class="blue-layer"></div>
+									<img class="latest-news__img" src="img/image_20.jpg" alt="Фото">
+									<div class="latest-news__text-container">
+										<p class="latest-news__time">12.12.19</p>
+										<h4 class="latest-news__title">В Самаре дети-сироты получили новые квартиры</h4>
+									</div>
+								</div>
+								<div class="latest-news__item">
+									<div class="blue-layer"></div>
+									<img class="latest-news__img" src="img/image_16.jpg" alt="Фото">
+									<div class="latest-news__text-container">
+										<p class="latest-news__time">12.12.19</p>
+										<h4 class="latest-news__title">В Красноглинском районе Самары откроется новая школа в 2020 году</h4>
+									</div>
+								</div>
+								<div class="latest-news__item">
+									<div class="blue-layer"></div>
+									<img class="latest-news__img" src="img/image_15.jpg" alt="Фото">
+									<div class="latest-news__text-container">
+										<p class="latest-news__time">12.12.19</p>
+										<h4 class="latest-news__title">В Самаре появятся библиотеки нового поколения</h4>
+									</div>
+								</div>
+								<div class="latest-news__item">
+									<div class="blue-layer"></div>
+									<img class="latest-news__img" src="img/image_17.jpg" alt="Фото">
+									<div class="latest-news__text-container">
+										<p class="latest-news__time">12.12.19</p>
+										<h4 class="latest-news__title">До конца 2019 года в микрорайоне «Волгарь» построят 5 дорог</h4>
+									</div>
+								</div>
+								<div class="latest-news__item">
+									<div class="blue-layer"></div>
+									<img class="latest-news__img" src="img/image_14.jpg" alt="Фото">
+									<div class="latest-news__text-container">
+										<p class="latest-news__time">12.12.19</p>
+										<h4 class="latest-news__title">В Администрации города обсудили подготовку к Новогодним праздникам</h4>
+									</div>
+								</div>
+								<div class="latest-news__item">
+									<div class="blue-layer"></div>
+									<img class="latest-news__img" src="img/image_20.jpg" alt="Фото">
+									<div class="latest-news__text-container">
+										<p class="latest-news__time">12.12.19</p>
+										<h4 class="latest-news__title">В Самаре дети-сироты получили новые квартиры</h4>
+									</div>
+								</div>
 						</div>
-						<div class="latest-news__item">
-							<div class="blue-layer"></div>
-							<img class="latest-news__img" src="img/image_16.jpg" alt="Фото">
-							<div class="latest-news__text-container">
-								<p class="latest-news__time">12.12.19</p>
-								<h4 class="latest-news__title">В Красноглинском районе Самары откроется новая школа в 2020 году</h4>
-							</div>
+						<div id="fragment-2">
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
 						</div>
-						<div class="latest-news__item">
-							<div class="blue-layer"></div>
-							<img class="latest-news__img" src="img/image_15.jpg" alt="Фото">
-							<div class="latest-news__text-container">
-								<p class="latest-news__time">12.12.19</p>
-								<h4 class="latest-news__title">В Самаре появятся библиотеки нового поколения</h4>
-							</div>
+						<div id="fragment-3">
+							Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
 						</div>
-						<div class="latest-news__item">
-							<div class="blue-layer"></div>
-							<img class="latest-news__img" src="img/image_17.jpg" alt="Фото">
-							<div class="latest-news__text-container">
-								<p class="latest-news__time">12.12.19</p>
-								<h4 class="latest-news__title">До конца 2019 года в микрорайоне «Волгарь» построят 5 дорог</h4>
-							</div>
-						</div>
-						<div class="latest-news__item">
-							<div class="blue-layer"></div>
-							<img class="latest-news__img" src="img/image_14.jpg" alt="Фото">
-							<div class="latest-news__text-container">
-								<p class="latest-news__time">12.12.19</p>
-								<h4 class="latest-news__title">В Администрации города обсудили подготовку к Новогодним праздникам</h4>
-							</div>
-						</div>
-						<div class="latest-news__item">
-							<div class="blue-layer"></div>
-							<img class="latest-news__img" src="img/image_20.jpg" alt="Фото">
-							<div class="latest-news__text-container">
-								<p class="latest-news__time">12.12.19</p>
-								<h4 class="latest-news__title">В Самаре дети-сироты получили новые квартиры</h4>
-							</div>
-						</div>
+					</div>
 					</div>
 				</div>
 			</section>
@@ -221,10 +239,10 @@
 
 		<footer class="page-footer">
 			<div class="wrapper">
-				<div class="navigation__logo-container navigation__logo-container--footer">
-					<h1 class="navigation__title navigation__title--footer">Департамент <b>Градостроительства</b> Городского округа Самары</h1>
-					<a href="index.html">
-						<img class="navigation__logo" src="img/Coat_of_Arms_of_Samara_(Samara_oblast).png" alt="Лого">
+				<div class="navigation__logo-container--footer">
+					<h2 class="navigation__title--footer">Департамент <b>Градостроительства</b> Городского округа Самары</h2>
+					<a class="navigation__link--footer" href="index.html">
+						<img class="navigation__logo--footer" src="img/Coat_of_Arms_of_Samara_(Samara_oblast).png" alt="Лого">
 					</a>
 				</div>
 				<div class="page-footer__items-container">
@@ -261,24 +279,28 @@
 						</div>
 						<div class="page-footer-phone-number">
 							<span class="page-footer__contact-phone">Контактный номер</span>
-							<a href="tel:88462420983" class="page-footer__phone">8 (846) 242-09-83</a>
+							<a href="tel:88462420574" class="page-footer__phone">8 (846) 242-05-74</a>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="page-footer__copyright">
-				<a class="page-footer__site-information" href="#">Информация о сайте</a>
-				<span>&copy; Администрация города Самара, 2014</span>
-				<a class="page-footer__seven-group-link" href="#">Разработка сайтов: seven-group.pro</a>
+				<div class="wrapper">
+					<a class="page-footer__site-information" href="#">Информация о сайте</a>
+					<span>&copy; Администрация города Самара, 2014</span>
+					<a class="page-footer__seven-group-link" href="#">Разработка сайтов: seven-group.pro</a>
+				</div>
 			</div>
 		</footer>
+
+		<script
+		src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+		crossorigin="anonymous">
+		</script>
+		<script src="owlCarousel/owl.carousel.min.js"></script>
+		<script src="jquery-ui/jquery-ui.min.js"></script>
+		<script src="build/js/script.js"></script>
+
 	</body>
 </html>
-
-<!-- <div class="slider__text-content">
-								<h2 class="slider__title">В Администрации города обсудили подготовку к Новогодним праздникам</h2>
-								<p class="slider__description">Руководители профильных Департаментов доложили об организации и проведении Новогодних мероприятий...</p>
-								<div class="slider__button">
-									<a href="#" class="slider__text">Подробнее</a>
-								</div>
-						</div> -->
