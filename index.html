@@ -4,10 +4,10 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="fonts/fonts.css">
 		<link rel="stylesheet" href="owlCarousel/owl.carousel.min.css">
 		<link rel="stylesheet" href="owlCarousel/owl.theme.default.min.css">
 		<link rel="stylesheet" href="jquery-ui/jquery-ui.css">
-		<link rel="stylesheet" href="fonts/fonts.css">
 		<link rel="stylesheet" href="build/css/style.css">
 		<title>Document</title>
 </head>
@@ -25,8 +25,9 @@
 			<section class="navigation">
 				<form action="POST" class="search-popup">
 					<input type="serach" class="navigation__search">
-					<button class="search-popup__close-btn"></button>
+					<button class="search-popup__submit"></button>
 				</form>
+				<button class="search-popup__close-btn"></button>
 				<div class="wrapper">
 						<div class="navigation__logo-container">
 							<h1 class="navigation__title">Департамент <b>Градостроительства</b> Городского округа Самары</h1>
@@ -75,9 +76,9 @@
 					<h3 class="latest-news__section-title">Последние новости</h3>
 					<div id="tabs">
 						<ul>
-							<li><a href="#fragment-1"class="latest-news__link latest-news__link--active">Новости</a></li>
-							<li><a href="#fragment-2"class="latest-news__link">Объявления</a></li>
-							<li><a href="#fragment-3"class="latest-news__link">Афиша</a></li>
+							<li class="latest-news__tabs-item"><a href="#fragment-1"class="latest-news__link">Новости</a></li>
+							<li class="latest-news__tabs-item"><a href="#fragment-2"class="latest-news__link">Объявления</a></li class="latest-news__tabs-item">
+							<li class="latest-news__tabs-item"><a href="#fragment-3"class="latest-news__link">Афиша</a></li class="latest-news__tabs-item">
 						</ul>
 						<div id="fragment-1">
 							<div class="latest-news__container">
@@ -156,7 +157,7 @@
 				<div class="wrapper">
 					<img class="infromation__img" src="img/information.jpg" alt="">
 					<div class="infromation__text">
-						<h4 class="infromation__title">В Самаре на 5-ой просеке построят новую школу в 2020 году</h4>
+						<h4 class="infromation__title news__title-link">В Самаре на 5-ой просеке построят новую школу в 2020 году</h4>
 						<p class="information__text">
 							Об этом на встрече с инициативной группой жителей рассказали Глава Самары Елена 
 							Лапушкина и заместитель председателя регионального Правительства Александр Фетисов.
