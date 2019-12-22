@@ -1,0 +1,36 @@
+.bread-crumbs {
+	padding-top: 37px;
+}
+
+.bread-crumbs__list {
+	display: flex;
+	padding: 0;
+	margin: 0;
+}
+
+.bread-crumbs__item {
+	position: relative;
+
+	list-style: none;
+	margin-right: 25px;
+	
+	&::after {
+		content: '';
+		width: 5px;
+		height: 5px;
+		border-radius: 50%;
+		background-color: #A0A4A8;
+		position: absolute;
+		top: 10px;
+		right: -16px;
+	}
+	&:last-child::after {
+		display: none;
+	}
+}
+
+.bread-crumbs__link {
+	font-size: 14px;
+	line-height: 22px;
+	color: #A0A4A8;
+}

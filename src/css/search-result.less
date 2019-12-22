@@ -1,0 +1,53 @@
+.serch-result__title {
+	width: 644px;
+
+	margin-top: 28px;
+	margin-bottom: 64px;
+}
+
+.search-result {
+	background-color: #F9F9FA;
+	padding-top: 75px;
+	padding-bottom: 60px;
+}
+
+.search-result__item {
+	position: relative;
+	padding-bottom: 25px;
+	margin-bottom: 50px;
+
+	border-bottom: 1px solid #E8E8E8;
+}
+
+.search-result__item-title {
+	margin-bottom: 27px;
+
+	&:hover {
+		cursor: pointer;
+		color: #186490;
+	}
+	&:active {
+		color: #0C4D73;
+	}
+}
+
+.search-result__time {
+	position: relative;
+
+	font-weight: 500;
+	font-size: 12px;
+	line-height: 16px;
+	display: flex;
+	align-items: center;
+	letter-spacing: 0.2px;
+	color: #A0A4A8;
+
+	padding-left: 28px;
+
+	&::before {
+		content: url(../../img/svg/calendar.svg);
+		position: absolute;
+		top: -1px;
+		left: 2px;
+	}
+}

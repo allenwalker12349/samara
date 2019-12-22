@@ -4,10 +4,10 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<link rel="stylesheet" href="fonts/fonts.css">
 		<link rel="stylesheet" href="owlCarousel/owl.carousel.min.css">
 		<link rel="stylesheet" href="owlCarousel/owl.theme.default.min.css">
 		<link rel="stylesheet" href="jquery-ui/jquery-ui.css">
-		<link rel="stylesheet" href="fonts/fonts.css">
 		<link rel="stylesheet" href="build/css/style.css">
 		<title>Document</title>
 </head>
@@ -15,7 +15,7 @@
 		<header>
 			<section class="top-contact">
 				<div class="wrapper">
-					<a href="/serch-result.html" class="top-contact__social">соц.сети</a>
+					<a href="search-result.html" class="top-contact__social">соц.сети</a>
 					<span class="top-contacts__adres">443100, г. Самара, ул. Галактионовская,132</span>
 					<span class="top-contact__working-hours">Пн-Чт: 08:30 - 17:30, Пт: 8:30 - 16:30, Сб-Вс: выходной</span>
 					<a href="tel:+78462420574" class="top-contact__phone">8 (846) 242-05-74</a>
@@ -23,10 +23,11 @@
 				</div>
 			</section>
 			<section class="navigation">
-				<form action="PSOT" class="search-popup">
+				<form action="POST" class="search-popup">
 					<input type="serach" class="navigation__search">
-					<button class="search-popup__close-btn"></button>
+					<button class="search-popup__submit"></button>
 				</form>
+				<button class="search-popup__close-btn"></button>
 				<div class="wrapper">
 						<div class="navigation__logo-container">
 							<h1 class="navigation__title">Департамент <b>Градостроительства</b> Городского округа Самары</h1>
@@ -36,10 +37,10 @@
 						</div>
 						<nav class="main-nav">
 							<ul class="main-nav__list">
-								<li class="main-nav__item"><a class="link--blue link--active" >О Департаменте</a></li>
-								<li class="main-nav__item"><a class="link--blue" href="#">Структура</a></li>
-								<li class="main-nav__item"><a class="link--blue" href="#">Новости</a></li>
-								<li class="main-nav__item"><a class="link--blue" href="#">Фото и видео</a></li>
+								<li class="main-nav__item"><a class="link--blue" href="about.html">О Департаменте</a></li>
+								<li class="main-nav__item"><a class="link--blue" href="structure.html">Структура</a></li>
+								<li class="main-nav__item"><a class="link--blue" href="news.html">Новости</a></li>
+								<li class="main-nav__item"><a class="link--blue link--active" href="#">Фото и видео</a></li>
 								<li class="main-nav__item"><a class="link--blue" href="#">НП Акты</a></li>
 								<li class="main-nav__item"><a class="link--blue" href="#">Обращения</a></li>
 								<li class="main-nav__item"><a class="link--blue" href="#">Контакты</a></li>
@@ -58,49 +59,116 @@
 				<div class="bread-crumbs">
 					<ul class="bread-crumbs__list">
 						<li class="bread-crumbs__item"><a class="bread-crumbs__link" href="index.html">Главная</a></li>
-						<li class="bread-crumbs__item"><a class="bread-crumbs__link">О Департаменте</a></li>
+						<li class="bread-crumbs__item"><a class="bread-crumbs__link">Фото и видео</a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="wrapper">
-				<h1 class="h3-title serch-result__title">О Департаменте градостроительства Самары</h1>
+				<h1 class="h3-title open-news__title">Фото и видео галерея</h1>
 			</div>
 
-			<section class="about">
+			<section class="gallery">
 				<div class="wrapper">
-					<img class="about__img" src="img/image_21.jpg" alt="На фото руководитель Департамента Градостроительства Шанов Сергей Николаевич">
-					<span class="about__img-description">На фото руководитель Департамента Градостроительства Шанов Сергей Николаевич</span>
-					<h4 class="h4-title about__title">
-						“Товарищи! консультация с широким активом в значительной степени 
-						обуславливает создание направлений прогрессивного развития.<br>
-						Равным образом дальнейшее развитие различных форм деятельности...”
-					</h4>
-					<span class="about__title-secription">- ообращение руководителя Департамента Градостроительства к жителям Самары</span>
-					<p class="about__text">
-						Департамент градостроительства городского округа Самара является органом местного самоуправления 
-						городского округа Самара, наделяемый Уставом собственными полномочиями по решению вопросов местного 
-						значения в сфере градостроительной деятельности. На основании Решения Думы городского округа Самара 
-						от 03.12.2015 г. № 34 «О внесении изменений в Устав городского округа Самара Самарской области » 
-						Департамент строительства и архитектуры городского округа Самара (сокращенное наименование-Департамент 
-						строительства и архитектуры г. о. Самара, ДСА г. о. Самара) переименован в Департамент градостроительства 
-						городского округа Самара 
-						(сокращенное наименование – Департамент градостроительства г. о. Самара, ДГС г. о. Самара).
-					</p>
-					<p class="about__text">
-						Департамент является органом местного самоуправления городского округа Самара, уполномоченным на осуществление 
-						муниципального контроля в рамках полномочий, установленных действующим законодательством Российской Федерации, 
-						законодательством Самарской области, настоящим Уставом и муниципальными правовыми актами городского округа Самара.
-					</p>
-					<p class="about__text">
-						Департамент обладает правами юридического лица и действует на основании общих для организаций данного вида 
-						положений Федерального закона "Об общих принципах организации местного самоуправления в Российской Федерации" 
-						от 6 октября 2003 года N 131-ФЗ применительно к казенным учреждениям.
-					</p>
-					<p class="about__text">
-						Для решения 
-						вопросов местного значения в сфере градостроительной деятельности Департамент наделяется следующими полномочиями:
-					</p>
+					<h2 class="h3-title open-news__title">Фотографии</h2>
 				</div>
+
+				<div class="gallery__item-container">
+					<div class="wrapper">
+						<a class="gallery__item-wrapper" href="#">
+							<div class="gallery__item">
+								<img src="img/image_17.jpg" alt="">
+								<h3 class="subtitle-1 gallery__item-title">Глава Самары проверила ход строительства и ремонта детских дошкольных учреждений</h3>
+								<div class="news__info-container">
+									<span class="news__data small-1">21 ноября 2019</span>
+									<span class="news__views small-1">1 147 просмотров</span>
+								</div>
+							</div>
+						</a>
+
+						<a class="gallery__item-wrapper" href="#">
+							<div class="gallery__item">
+								<img src="img/image_17.jpg" alt="">
+								<h3 class="subtitle-1 gallery__item-title">Глава Самары проверила ход строительства и ремонта детских дошкольных учреждений</h3>
+								<div class="news__info-container">
+									<span class="news__data small-1">21 ноября 2019</span>
+									<span class="news__views small-1">1 147 просмотров</span>
+								</div>
+							</div>
+						</a>
+
+						<a class="gallery__item-wrapper" href="#">
+							<div class="gallery__item">
+								<img src="img/image_17.jpg" alt="">
+								<h3 class="subtitle-1 gallery__item-title">Глава Самары проверила ход строительства и ремонта детских дошкольных учреждений</h3>
+								<div class="news__info-container">
+									<span class="news__data small-1">21 ноября 2019</span>
+									<span class="news__views small-1">1 147 просмотров</span>
+								</div>
+							</div>
+						</a>
+
+						<a class="gallery__item-wrapper" href="#">
+							<div class="gallery__item">
+								<img src="img/image_17.jpg" alt="">
+								<h3 class="subtitle-1 gallery__item-title">Глава Самары проверила ход строительства и ремонта детских дошкольных учреждений</h3>
+								<div class="news__info-container">
+									<span class="news__data small-1">21 ноября 2019</span>
+									<span class="news__views small-1">1 147 просмотров</span>
+								</div>
+							</div>
+						</a>
+
+						<button id="more-phoro" class="blue-button gallery__show-more-btn">Показать больше фотографий</button>
+
+					</div>
+				</div>
+
+				<section class="latest-news">
+					<div class="wrapper">
+						<h3 class="latest-news__section-title">Видеозаписи</h3>
+						<div id="tabs">
+							<ul>
+								<li class="latest-news__tabs-item"><a href="#fragment-1"class="latest-news__link">Новости</a></li>
+								<li class="latest-news__tabs-item"><a href="#fragment-2"class="latest-news__link">Мероприятия</a></li class="latest-news__tabs-item">
+								<li class="latest-news__tabs-item"><a href="#fragment-3"class="latest-news__link">Видеосюжеты</a></li class="latest-news__tabs-item">
+							</ul>
+								<div id="fragment-1">
+									<div class="gallery__video-container">
+										<a class="gallery__item-wrapper" href="#">
+											<div class="gallery__item">
+												<img src="img/image_17.jpg" alt="">
+												<h3 class="subtitle-1 gallery__item-title">Глава Самары проверила ход строительства и ремонта детских дошкольных учреждений</h3>
+												<div class="news__info-container">
+													<span class="news__data small-1">21 ноября 2019</span>
+													<span class="news__views small-1">1 147 просмотров</span>
+												</div>
+											</div>
+										</a>
+
+										<a class="gallery__item-wrapper" href="#">
+											<div class="gallery__item">
+												<img src="img/image_17.jpg" alt="">
+												<h3 class="subtitle-1 gallery__item-title">Глава Самары проверила ход строительства и ремонта детских дошкольных учреждений</h3>
+												<div class="news__info-container">
+													<span class="news__data small-1">21 ноября 2019</span>
+													<span class="news__views small-1">1 147 просмотров</span>
+												</div>
+											</div>
+										</a>
+									</div>
+								</div>
+								<div id="fragment-2">
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+								</div>
+								<div id="fragment-3">
+									Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+								</div>
+							</div>
+							<button id="more-video" class="blue-button gallery__show-more-btn">Показать больше видеозаписей</button>
+						</div>
+					</div>
+				</section>
+
 			</section>
 
 			<section class="links">
@@ -109,7 +177,7 @@
 					<div class="important-information__buttons-container">
 						<button class="slide-btn slide-btn--prev">Назад</button>
 						<button class="slide-btn slide-btn--next">Дальше</button>
-				</div>
+					</div>
 				</div>
 				<div class="wrapper">
 					<a class="links__item" href="#" target="_blank">Сайт правительства Самарской области</a>
@@ -118,6 +186,8 @@
 					<a class="links__item" href="#" target="_blank">Мои<br>документы</a>
 				</div>
 			</section>
+
+			
 
 		</main>
 		<footer class="page-footer">
@@ -184,7 +254,7 @@
 		crossorigin="anonymous">
 		</script>
 		<script src="owlCarousel/owl.carousel.min.js"></script>
-		<script src="/jquery-ui/jquery-ui.min.js"></script>
+		<script src="jquery-ui/jquery-ui.min.js"></script>
 		<script src="build/js/script.js"></script>
 
 	</body>
