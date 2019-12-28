@@ -17,9 +17,25 @@
 
 .main-nav__item {
 	box-sizing: border-box;
-	padding: 22px 15px;
+	padding: 22px 8px;
 }
 	
 .main-nav__item a {
 	cursor: pointer;
+ }
+
+ .main-nav__burger-container {
+	 cursor: pointer;
+	 align-self: center;
+	 display: none;
+ }
+
+ @media (max-width: 1140px) {
+	.main-nav__list {
+		flex-direction: column;
+	}
+
+	.main-nav__burger-container {
+		display: block;
+	}
  }

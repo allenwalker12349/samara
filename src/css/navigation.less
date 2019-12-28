@@ -14,7 +14,6 @@
 	justify-content: flex-end;
 	width: 152px;
 	padding-left: 15px;
-	border-left: 1px solid #2A2E32;
 	display: flex;
 	align-items: center;
 }
@@ -35,8 +34,8 @@
 	display: flex;
 	align-items: center;
 	width: 155px;
-	border-right: 1px solid #383B3F;
 	padding-right: 12px;
+	padding-bottom: 9px;
 }
 
 .navigation .wrapper {
@@ -44,9 +43,13 @@
 	justify-content: space-between;
 }
 
+.navigation__logo-link {
+	display: flex;
+	align-items: center;
+}
+
 .navigation__title {
-	display: inline-block;
-	vertical-align: middle;
+	display: block;
 	margin: 0;
 	text-align: right;
 	font-style: normal;
@@ -57,20 +60,16 @@
 }
 
 .navigation__logo {
-	display: inline-block;
-	vertical-align: middle;
+	display: block;
 	margin-left: 7px;
-	width: 27px;
+	width: auto;
 	height: 46px;
 }
 
 .navigation__logo-container--footer {
 	position: relative;
-
 	padding-right: 40px;
 	padding-top: 69px;
-
-	border-right: 1px solid #2F3337;
 }
 
 .navigation__link--footer {
@@ -96,4 +95,69 @@
 	width: 27px;
 	height: 46px;
 }
+
+@media (max-width: 1140px) {
+	.page-footer .wrapper {
+		width: 270px;
+		margin: 0 auto;
+	}
+	.navigation {
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 70px;
+			left: 0;
+			width: 100%;
+			height: 1px;
+			background-color: #FFFFFF;
+			opacity: 0.15;
+		}
+	}
+
+	.navigation .wrapper {
+		flex-wrap: wrap;
+		padding-top: 15px;
+	}
+
+	.navigation__container {
+		width: auto;
+		padding-bottom: 9px;
+		order: 2;
+	}
+
+	.main-nav {
+		width: 100%;
+		justify-content: center;
+		order: 3;
+	}
+
+	.navigation__user-login-icon {
+		display: none;
+	}
+
+	.navigation__title--footer {
+		text-align: left;
+		font-size: 12px;
+		line-height: 13px;
+		order: 2;
+		display: inline-block;
+		margin: 0;
+		margin-left: 13px;
+	}
+
+	.navigation__logo-container--footer {
+		display: flex;
+		align-items: center;
+		border: none;
+		padding: 0;
+		padding-top: 34px;
+		padding-bottom: 34px;
+	}
+
+	.navigation__link--footer {
+		position: static;
+		order: 1;
+	}
+ }
 

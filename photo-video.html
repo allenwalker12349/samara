@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<link rel="stylesheet" href="fonts/fonts.css">
+		<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+		<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 		<link rel="stylesheet" href="owlCarousel/owl.carousel.min.css">
 		<link rel="stylesheet" href="owlCarousel/owl.theme.default.min.css">
 		<link rel="stylesheet" href="jquery-ui/jquery-ui.css">
@@ -15,8 +17,17 @@
 		<header>
 			<section class="top-contact">
 				<div class="wrapper">
-					<a href="search-result.html" class="top-contact__social">соц.сети</a>
-					<span class="top-contacts__adres">443100, г. Самара, ул. Галактионовская,132</span>
+					<div class="top-contact__social-container">
+						<a href="search-result.html" class="top-contact__social">соц.сети</a>
+						<ul class="top-contact__dropDown">
+							<li class="top-contact__dropDown-item"><a class="top-contact__dropDown-link" href="#">ВКонтакте</a></li>
+							<li class="top-contact__dropDown-item"><a class="top-contact__dropDown-link" href="#">Одноклассники</a></li>
+							<li class="top-contact__dropDown-item"><a class="top-contact__dropDown-link" href="#">YouTube</a></li>
+							<li class="top-contact__dropDown-item"><a class="top-contact__dropDown-link" href="#">Twitter</a></li>
+							<li class="top-contact__dropDown-item"><a class="top-contact__dropDown-link" href="#">Facebook</a></li>
+						</ul>
+					</div> 
+					<span class="top-contacts__adres"><span class="top-contact__index">443100,</span> г. Самара, ул. Галактионовская,132</span>
 					<span class="top-contact__working-hours">Пн-Чт: 08:30 - 17:30, Пт: 8:30 - 16:30, Сб-Вс: выходной</span>
 					<a href="tel:+78462420574" class="top-contact__phone">8 (846) 242-05-74</a>
 					<a href="#" class="visually-impaired">слабовидящим</a>
@@ -30,8 +41,8 @@
 				<button class="search-popup__close-btn"></button>
 				<div class="wrapper">
 						<div class="navigation__logo-container">
-							<h1 class="navigation__title">Департамент <b>Градостроительства</b> Городского округа Самары</h1>
-							<a href="index.html">
+							<a class="navigation__logo-link" href="index.html">
+								<h1 class="navigation__title">Департамент Градостроительства Городского округа Самары</h1>
 								<img class="navigation__logo" src="img/Coat_of_Arms_of_Samara_(Samara_oblast).png" alt="Лого">
 							</a>
 						</div>
@@ -40,15 +51,24 @@
 								<li class="main-nav__item"><a class="link--blue" href="about.html">О Департаменте</a></li>
 								<li class="main-nav__item"><a class="link--blue" href="structure.html">Структура</a></li>
 								<li class="main-nav__item"><a class="link--blue" href="news.html">Новости</a></li>
-								<li class="main-nav__item"><a class="link--blue link--active" href="#">Фото и видео</a></li>
-								<li class="main-nav__item"><a class="link--blue" href="#">НП Акты</a></li>
-								<li class="main-nav__item"><a class="link--blue" href="#">Обращения</a></li>
-								<li class="main-nav__item"><a class="link--blue" href="#">Контакты</a></li>
+								<li class="main-nav__item"><a class="link--blue" href="photo-video.html">Фото и видео</a></li>
+								<li class="main-nav__item"><a class="link--blue" href="npa.html">НП Акты</a></li>
+								<li class="main-nav__item"><a class="link--blue" href="reception.html">Обращения</a></li>
+								<li class="main-nav__item"><a class="link--blue" href="reception.html">Эл. очередь</a></li>
+								<li class="main-nav__item"><a class="link--blue" href="contacts.html">Контакты</a></li>
+								<li class="main-nav__item"><a class="link--blue" href="contacts.html">Личный</a></li>
 							</ul>
 						</nav>
 						<div class="navigation__container">
 							<img class="navigation__search-icon" src="img/svg/search.svg" alt="Поиск">
-							<a class="navigation__user-login-icon" href="#" aria-label="Вход в личный кабинет"><img class="navigation__user-icon" src="img/svg/user.svg" alt="Вход в личный кабинет"></a>
+							<div class="main-nav__burger-container">
+								<svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect y="10" width="14" height="1" fill="#C4C4C4"/>
+									<rect y="5" width="14" height="1" fill="#C4C4C4"/>
+									<rect width="14" height="1" fill="#C4C4C4"/>
+								</svg>
+							</div>
+							<a class="navigation__user-login-icon" href="login.html" aria-label="Вход в личный кабинет"><img class="navigation__user-icon" src="img/svg/user.svg" alt="Вход в личный кабинет"></a>
 						</div>
 				</div>
 			</section>
@@ -74,9 +94,13 @@
 
 				<div class="gallery__item-container">
 					<div class="wrapper">
+
 						<a class="gallery__item-wrapper" href="#">
 							<div class="gallery__item">
-								<img src="img/image_17.jpg" alt="">
+								<div class="gallery__img-container">
+									<div class="gallery__item-hover"></div>
+									<img src="img/image_17.jpg" alt="">
+								</div>
 								<h3 class="subtitle-1 gallery__item-title">Глава Самары проверила ход строительства и ремонта детских дошкольных учреждений</h3>
 								<div class="news__info-container">
 									<span class="news__data small-1">21 ноября 2019</span>
@@ -87,7 +111,10 @@
 
 						<a class="gallery__item-wrapper" href="#">
 							<div class="gallery__item">
-								<img src="img/image_17.jpg" alt="">
+								<div class="gallery__img-container">
+									<div class="gallery__item-hover"></div>
+									<img src="img/image_17.jpg" alt="">
+								</div>
 								<h3 class="subtitle-1 gallery__item-title">Глава Самары проверила ход строительства и ремонта детских дошкольных учреждений</h3>
 								<div class="news__info-container">
 									<span class="news__data small-1">21 ноября 2019</span>
@@ -98,7 +125,10 @@
 
 						<a class="gallery__item-wrapper" href="#">
 							<div class="gallery__item">
-								<img src="img/image_17.jpg" alt="">
+								<div class="gallery__img-container">
+									<div class="gallery__item-hover"></div>
+									<img src="img/image_17.jpg" alt="">
+								</div>
 								<h3 class="subtitle-1 gallery__item-title">Глава Самары проверила ход строительства и ремонта детских дошкольных учреждений</h3>
 								<div class="news__info-container">
 									<span class="news__data small-1">21 ноября 2019</span>
@@ -109,7 +139,10 @@
 
 						<a class="gallery__item-wrapper" href="#">
 							<div class="gallery__item">
-								<img src="img/image_17.jpg" alt="">
+								<div class="gallery__img-container">
+									<div class="gallery__item-hover"></div>
+									<img src="img/image_17.jpg" alt="">
+								</div>
 								<h3 class="subtitle-1 gallery__item-title">Глава Самары проверила ход строительства и ремонта детских дошкольных учреждений</h3>
 								<div class="news__info-container">
 									<span class="news__data small-1">21 ноября 2019</span>
@@ -126,45 +159,113 @@
 				<section class="latest-news">
 					<div class="wrapper">
 						<h3 class="latest-news__section-title">Видеозаписи</h3>
-						<div id="tabs">
+						<div id="tabs" class="gallery__tabs">
 							<ul>
 								<li class="latest-news__tabs-item"><a href="#fragment-1"class="latest-news__link">Новости</a></li>
-								<li class="latest-news__tabs-item"><a href="#fragment-2"class="latest-news__link">Мероприятия</a></li class="latest-news__tabs-item">
-								<li class="latest-news__tabs-item"><a href="#fragment-3"class="latest-news__link">Видеосюжеты</a></li class="latest-news__tabs-item">
+								<li class="latest-news__tabs-item"><a href="#fragment-2"class="latest-news__link">Мероприятия</a></li>
+								<li class="latest-news__tabs-item"><a href="#fragment-3"class="latest-news__link">Видеосюжеты</a></li>
 							</ul>
-								<div id="fragment-1">
-									<div class="gallery__video-container">
-										<a class="gallery__item-wrapper" href="#">
-											<div class="gallery__item">
+							<div id="fragment-1">
+								<div class="latest-news__container">
+									
+									<a class="gallery__item-wrapper" href="#">
+										<div class="gallery__item">
+											<div class="gallery__img-container">
+												<div class="gallery__item-hover"></div>
 												<img src="img/image_17.jpg" alt="">
-												<h3 class="subtitle-1 gallery__item-title">Глава Самары проверила ход строительства и ремонта детских дошкольных учреждений</h3>
-												<div class="news__info-container">
-													<span class="news__data small-1">21 ноября 2019</span>
-													<span class="news__views small-1">1 147 просмотров</span>
-												</div>
 											</div>
-										</a>
+											<h3 class="subtitle-1 gallery__item-title">Глава Самары проверила ход строительства и ремонта детских дошкольных учреждений</h3>
+											<div class="news__info-container">
+												<span class="news__data small-1">21 ноября 2019</span>
+												<span class="news__views small-1">1 147 просмотров</span>
+											</div>
+										</div>
+									</a>
 
-										<a class="gallery__item-wrapper" href="#">
-											<div class="gallery__item">
+									<a class="gallery__item-wrapper" href="#">
+										<div class="gallery__item">
+											<div class="gallery__img-container">
+												<div class="gallery__item-hover"></div>
 												<img src="img/image_17.jpg" alt="">
-												<h3 class="subtitle-1 gallery__item-title">Глава Самары проверила ход строительства и ремонта детских дошкольных учреждений</h3>
-												<div class="news__info-container">
-													<span class="news__data small-1">21 ноября 2019</span>
-													<span class="news__views small-1">1 147 просмотров</span>
-												</div>
 											</div>
-										</a>
-									</div>
-								</div>
-								<div id="fragment-2">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
-								</div>
-								<div id="fragment-3">
-									Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+											<h3 class="subtitle-1 gallery__item-title">Глава Самары проверила ход строительства и ремонта детских дошкольных учреждений</h3>
+											<div class="news__info-container">
+												<span class="news__data small-1">21 ноября 2019</span>
+												<span class="news__views small-1">1 147 просмотров</span>
+											</div>
+										</div>
+									</a>
+
 								</div>
 							</div>
-							<button id="more-video" class="blue-button gallery__show-more-btn">Показать больше видеозаписей</button>
+							<div class="announce" id="fragment-2">
+								<div class="latest-news__container">
+									
+									<a class="gallery__item-wrapper" href="#">
+										<div class="gallery__item">
+											<div class="gallery__img-container">
+												<div class="gallery__item-hover"></div>
+												<img src="img/image_17.jpg" alt="">
+											</div>
+											<h3 class="subtitle-1 gallery__item-title">Глава Самары проверила ход строительства и ремонта детских дошкольных учреждений</h3>
+											<div class="news__info-container">
+												<span class="news__data small-1">21 ноября 2019</span>
+												<span class="news__views small-1">1 147 просмотров</span>
+											</div>
+										</div>
+									</a>
+
+									<a class="gallery__item-wrapper" href="#">
+										<div class="gallery__item">
+											<div class="gallery__img-container">
+												<div class="gallery__item-hover"></div>
+												<img src="img/image_17.jpg" alt="">
+											</div>
+											<h3 class="subtitle-1 gallery__item-title">Глава Самары проверила ход строительства и ремонта детских дошкольных учреждений</h3>
+											<div class="news__info-container">
+												<span class="news__data small-1">21 ноября 2019</span>
+												<span class="news__views small-1">1 147 просмотров</span>
+											</div>
+										</div>
+									</a>
+
+								</div>
+							</div>
+							<div class="affiche" id="fragment-3">
+								<div class="latest-news__container">
+									
+									<a class="gallery__item-wrapper" href="#">
+										<div class="gallery__item">
+											<div class="gallery__img-container">
+												<div class="gallery__item-hover"></div>
+												<img src="img/image_17.jpg" alt="">
+											</div>
+											<h3 class="subtitle-1 gallery__item-title">Глава Самары проверила ход строительства и ремонта детских дошкольных учреждений</h3>
+											<div class="news__info-container">
+												<span class="news__data small-1">21 ноября 2019</span>
+												<span class="news__views small-1">1 147 просмотров</span>
+											</div>
+										</div>
+									</a>
+
+									<a class="gallery__item-wrapper" href="#">
+										<div class="gallery__item">
+											<div class="gallery__img-container">
+												<div class="gallery__item-hover"></div>
+												<img src="img/image_17.jpg" alt="">
+											</div>
+											<h3 class="subtitle-1 gallery__item-title">Глава Самары проверила ход строительства и ремонта детских дошкольных учреждений</h3>
+											<div class="news__info-container">
+												<span class="news__data small-1">21 ноября 2019</span>
+												<span class="news__views small-1">1 147 просмотров</span>
+											</div>
+										</div>
+									</a>
+
+								</div>
+							</div>
+						</div>
+						<button id="more-video" class="blue-button gallery__show-more-btn">Показать больше видеозаписей</button>
 						</div>
 					</div>
 				</section>
@@ -254,6 +355,7 @@
 		crossorigin="anonymous">
 		</script>
 		<script src="owlCarousel/owl.carousel.min.js"></script>
+		<script type="text/javascript" src="slick/slick.min.js"></script>
 		<script src="jquery-ui/jquery-ui.min.js"></script>
 		<script src="build/js/script.js"></script>
 

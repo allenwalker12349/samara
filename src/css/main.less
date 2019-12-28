@@ -9,6 +9,7 @@ a {
 	}
 	
 	body {
+		min-width: 320px;
 		padding: 0;
 		margin: 0;
 		font-family: HelveticaNeueCyr, Arial, sans-serif;
@@ -16,11 +17,22 @@ a {
 		font-weight: normal;
 		font-size: 11px;
 		line-height: 14px;
-	} 
+	}
+
+	header {
+		position: sticky;
+		top: 0;
+		left: 0;
+		z-index: 9999;
+	}
 	
 	.wrapper {
 		width: 1136px;
 		margin: 0 auto;
+	}
+
+	.wp-admin a {
+		color: #0073aa;
 	}
 
 	.visually-hidden:not(:focus):not(:active),
@@ -63,7 +75,7 @@ input[type="radio"].visually-hidden {
 .slide-btn--next {
 	&::before {
 		content: url('../../img/svg/arrow_left.svg');
-		transform: rotate(180deg);
+		transform: rotateY(180deg);
 		position: absolute;
 		top: 9px;
 		right: 9px;
@@ -190,4 +202,12 @@ input[type="radio"].visually-hidden {
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: 0.1px;
+}
+
+@media (max-width: 1140px) {
+	.wrapper {
+		width: 100%;
+		margin-right: 25px;
+		margin-left: 25px;
+	}
 }

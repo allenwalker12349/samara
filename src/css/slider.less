@@ -90,3 +90,56 @@
 	transition: all 0.25s;
 	transform: translateX(-30px);
 }
+
+.slider__item {
+	position: relative;
+	background-image: url(../../img/Operativka_1.jpg);
+	background-size: cover;
+	height: 500px;
+}
+
+.slider .slick-dots {
+	display: flex;
+	flex-direction: column;
+	width: auto;
+	top: 120px;
+	left: -30px;
+}
+
+.slider .slick-dots li {
+	height: 35px;
+}
+
+.slider .slick-dots li button:before {
+	content: '';
+	width: 2px;
+	height: 35px;
+	background-color: rgba(255,255,255,0.8);
+}
+
+.slider .slick-dots li button {
+	height: 35px;
+}
+
+@media (max-width: 1140px) {
+
+	.slider__text-content {
+		width: 270px;
+	}
+	
+	.slider__title {
+		width: 270px;
+		font-weight: 300;
+		font-size: 20px;
+		line-height: 22px;
+		letter-spacing: 0.2px;
+	}
+
+	.slider__description {
+		display: none;
+	}
+
+	.slider__button {
+		width: 100%;
+	}
+}

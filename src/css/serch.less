@@ -51,13 +51,13 @@
 }
 
 .search-popup__close-btn {
+	display: none;
 	background-color: transparent;
 	border: none;
 	position: absolute;
 	top: 25px;
 	right: 20%;
 	margin-left: 65px;
-	display: flex;
 	align-self: center;
 	width: 20px;
 	height: 20px;
@@ -88,5 +88,16 @@
 	}
 	&:hover::before {
 		background-color: #E8E8E8;
+	}
+}
+
+@media (max-width: 1140px) {
+	.search-popup__close-btn {
+		margin-left: 0;
+		right: 8%;
+	}
+
+	.navigation__search {
+		left: -6%;
 	}
 }
