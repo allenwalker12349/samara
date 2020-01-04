@@ -17,10 +17,22 @@
 
 .main-nav__item {
 	box-sizing: border-box;
-	padding: 22px 8px;
+	padding: 22px 13px;
+}
+
+.main-nav__item--lk {
+	display: none;
 }
 	
 .main-nav__item a {
+	font-family: HelveticaNeueCyr;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 22px;
+	text-align: center;
+	letter-spacing: 0.1px;
+	color: #E8E8E8;
 	cursor: pointer;
  }
 
@@ -33,6 +45,10 @@
  @media (max-width: 1140px) {
 	.main-nav__list {
 		flex-direction: column;
+	}
+
+	.main-nav__item--lk {
+		display: block;
 	}
 
 	.main-nav__burger-container {

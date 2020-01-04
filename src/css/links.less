@@ -14,7 +14,7 @@
 
 .links__title {
 	margin: 0;
-	margin-top: 40px;
+	margin-top: 25px;
 	margin-bottom: 50px;
 	font-weight: 900;
 	font-size: 32px;
@@ -46,6 +46,41 @@
 	}
 	&:active {
 		background-color: #0C4D73;
+	}
+}
+
+@media (max-width: 1140px) {
+	.links .wrapper {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 0 25px;
+	}
+
+	.important-information__buttons-container {
+		display: none;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+	.links {
+		padding-top: 25px;
+		padding-bottom: 60px;
+	}
+
+	.links__title-container.wrapper {
+		padding: 0;
+	}
+
+	.links__item {
+		width: 216px;
+		padding-right: 5px;
+	}
+
+	.links__title {
+		font-size: 18px;
+		line-height: 20px;
+		margin: 0;
+		margin-bottom: 30px;
 	}
 }
 

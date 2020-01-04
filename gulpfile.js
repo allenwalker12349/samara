@@ -52,13 +52,15 @@ const cssFiles = [
    './src/css/gallery-inner.less',
    './src/css/appountment.less',
    './src/css/announce.less',
-   './src/css/apply.less'
+   './src/css/apply.less',
+   './src/css/ui-style.less'
    
 ]
 //Порядок подключения js файлов
 const jsFiles = [
    './src/js/lib.js',
-   './src/js/main.js'
+   './src/js/main.js',
+   './src/js/error.js'
 ]
 
 //Таск на стили CSS

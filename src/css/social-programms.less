@@ -1,5 +1,5 @@
 .social-programms {
-  padding-top: 110px;
+  padding-top: 95px;
   padding-bottom: 90px;
   background-color: #F9F9FA;
 }
@@ -42,11 +42,58 @@
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: 0.1px;
+	margin: 0;
+	margin-bottom: 10px;
 }
 
 .social-programms__item-description {
 	font-size: 12px;
 	line-height: 16px;
 	letter-spacing: 0.2px;
+	margin: 0;
+}
+
+@media (max-width: 1140px) {
+	.social-programms .wrapper {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 0 25px;
+	}
+
+	.slick-slide .wrapper {
+		box-sizing: border-box;
+		width: 100%;
+		padding: 0 25px;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+	.social-programms {
+		padding-top: 30px;
+		padding-bottom: 20px;
+	}
+
+	.social-programms__title {
+		font-size: 18px;
+		line-height: 20px;
+	}
+
+	.social-programms__item {
+		box-sizing: border-box;
+		width: 215px;
+		height: 210px;
+		padding: 17px 20px;
+		margin: 0;
+		margin-right: 10px;
+	}
+
+	.social-programms__item-title {
+		font-size: 14px;
+		line-height: 24px;
+	}
+
+	.social-programms__item p {
+		display: none;
+	}
 }
 

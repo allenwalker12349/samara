@@ -12,35 +12,89 @@ $(document).ready(function(){
 	}
 
   $('.owl-carousel').owlCarousel({
-    loop:true,
+		loop:true,
+		center: true,
 		responsiveClass:true,
-		margin:200,
 		navContainerClass: 'important-information__buttons-container',
 		navClass: ['slide-btn slide-btn--prev', 'slide-btn slide-btn--next'],
     responsive:{
         0:{
-            items:1,
-            nav:true
+						items:1,
+						center: true,
+						nav:false,
+						loop:true
         },
-        600:{
-            items:3,
+        700:{
+            items:2,
             nav:false
         },
         1000:{
-            items:4,
+            items:3,
             nav:true,
             loop:true
-        }
-    }
+				}
+			}
 	});
 
 	$('.slider').slick({
-		arrows:true,
-		dots:true,
 		draggable:true,
 		infinite:true,
 		swipe:true,
-		appendDots: $('.slider__text-content')
+		slidesToShow: 1,
+		responsive: [
+			{
+			breakpoint: 575,
+			settings: {
+				arrows: false
+				}
+			}
+		]
+	});
+
+	if ($(window).width() <= 575) {
+		$('.social-programms__items-container').slick({
+			infinite: true,
+			arrows: false,
+			dots: false,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			centerMode: true,
+			variableWidth: true,
+		});
+	}
+
+	$('.gallery-inner__slider').slick({
+		centerMode: true,
+		slidesToShow: 1,
+		adaptiveHeight: true,
+		responsive: [
+			{
+				breakpoint: 768,
+				settings: {
+					arrows: false,
+					centerMode: true,
+					centerPadding: '40px',
+					slidesToShow: 1
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					arrows: false,
+					centerMode: true,
+					centerPadding: '40px',
+					slidesToShow: 1
+				}
+			}
+		]
+	});
+
+	$('.slider__important-information').slick({
+		arrows:true,
+		draggable:true,
+		infinite:true,
+		swipe:true,
+		appendArrows: $('.important-information__arrows-container')
 	});
 
 	$('.gallery-inner__slider').slick({
@@ -108,5 +162,12 @@ $(document).ready(function(){
 		menu.slideToggle();
 	});
 
+	$( "#appointmentDate" ).datepicker();
+
+	$( "#appointmentTime" ).selectmenu()
+	.selectmenu( "menuWidget" )
+	.addClass( "overflow" );
+	
+	$( "#typeOfService" ).selectmenu();
 
 });	

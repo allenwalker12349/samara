@@ -1,5 +1,5 @@
-.slider {
-	height: 500px;
+#slider {
+	max-height: 500px;
 }
 
 .first-screen {
@@ -19,8 +19,8 @@
  .slider__text-content {
 	 position: relative;
 	 width: 630px;
-	 padding-top: 56px;
-	 padding-bottom: 55px;
+	 padding-top: 87px;
+	 padding-bottom: 65px;
 	 z-index: 2;
 }
 
@@ -41,7 +41,6 @@
 
 .slider__description {
 	margin-top: 17px;
-	margin-bottom: 42px;
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: 0.1px;
@@ -56,11 +55,12 @@
 
 .slider__button {
 	position: relative;
+	bottom: -5px;
 	overflow: hidden;
 	display: block;
 	padding: 16px 5px;
 
-	width: 210px;
+	width: 200px;
 
 	background: #186490;
 	border-radius: 1px;
@@ -98,30 +98,61 @@
 	height: 500px;
 }
 
-.slider .slick-dots {
+#slider .slick-dots {
 	display: flex;
 	flex-direction: column;
 	width: auto;
-	top: 120px;
-	left: -30px;
+	top: 80px;
+	left: -35px;
+	z-index: 2;
 }
 
-.slider .slick-dots li {
+#slider .slick-dots li {
 	height: 35px;
 }
 
-.slider .slick-dots li button:before {
+#slider .slick-dots li button:before {
 	content: '';
 	width: 2px;
 	height: 35px;
 	background-color: rgba(255,255,255,0.8);
 }
 
-.slider .slick-dots li button {
+#slider .slick-dots li button {
 	height: 35px;
 }
 
-@media (max-width: 1140px) {
+#slider .slick-next {
+	right: 0;
+	width: 200px;
+	height: 500px;
+
+	&:hover {
+		background: linear-gradient(270deg, #15191D 0%, rgba(21, 25, 29, 0) 100%);
+		opacity: 0.8;
+	}
+
+	&::before {
+		content: url('../../img/svg/slider-arrow.svg');
+		position: absolute;
+		top: 45%;
+		left: 50%;
+		width: 30px;
+		height: 30px;
+		opacity: 0.6;
+	}
+}
+
+#slider .slick-next:hover::before {
+	opacity: 1;
+}
+
+#slider .slick-slide {
+	height: 500px;
+}
+
+
+@media (min-width: 320px) and (max-width: 575px) {
 
 	.slider__text-content {
 		width: 270px;
@@ -140,6 +171,24 @@
 	}
 
 	.slider__button {
-		width: 100%;
+		width: 98%;
+		bottom: -19px;
+	}
+
+	#slider .slick-slide {
+		height: 370px;
+	}
+
+	.slider__text-content {
+		padding-top: 198px;
+	}
+
+	#slider .slick-next {
+		position: absolute;
+		width: 0px;
+		height: 0px;
+		&::before {
+			display: none;
+		}
 	}
 }
