@@ -1,4 +1,5 @@
-// Получаем нужный элемент
+if (document.querySelector('.serch-result__title') && document.querySelector('.reception__error-pop-up')) {
+  // Получаем нужный элемент
 var element = document.querySelector('.serch-result__title');
 var popUp = document.querySelector('.reception__error-pop-up');
 
@@ -26,7 +27,6 @@ var Visible = function (target) {
 		popUp.style.display = 'block';
   } else {
     // Если элемент не видно, то запускаем этот код
-		console.clear();
 		popUp.setAttribute("style", "position: sticky; top: 81px; left: 0; display: block");
   };
 };
@@ -38,3 +38,5 @@ window.addEventListener('scroll', function() {
 
 // А также запустим функцию сразу. А то вдруг, элемент изначально видно
 Visible(element);
+}
+

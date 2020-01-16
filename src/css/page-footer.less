@@ -4,7 +4,7 @@
 }
 
 .page-footer .wrapper {
-	width: 100%;
+	width: 1284px;
 	box-sizing: border-box;
 	padding-left: 40px;
 	padding-right: 40px;
@@ -12,10 +12,12 @@
 }
 
 .page-footer__navigation {
+	box-sizing: border-box;
 	display: flex;
 	justify-content: space-between;
 	width: 740px;
 	padding-top: 7px;
+	padding-right: 100px;
 }
 
 .page-footer__list {
@@ -211,6 +213,15 @@
 	display: none;
 }
 
+.page-footer__up-btn {
+	display: none;
+	font-size: 0;
+}
+
+.navigation__logo-container {
+	justify-content: flex-start;
+}
+
 @media (max-width: 1140px) {
 	.page-footer {
 		display: flex;
@@ -228,6 +239,7 @@
 	.page-footer .wrapper {
 		flex-direction: column;
 		padding: 0;
+		width: 100%;
 	}
 
 	.page-footer__items-container {
@@ -299,6 +311,30 @@
 		padding-top: 25px;
 		padding-right: 25px;
 		padding-left: 25px;
+	}
+
+	.navigation__logo-container--footer {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.page-footer__up-btn {
+		position: relative;
+		box-sizing: border-box;
+		display: block;
+		border: 1px solid #52575C;
+		border-radius: 50%;
+		width: 40px;
+		height: 40px;
+
+		&::before {
+			position: absolute;
+			content: url(../../img/svg/arow_right.svg);
+			width: 20px;
+			top: 5px;
+			left: 13px;
+			transform: rotateZ(-90deg);
+		}
 	}
 
 	.page-footer__item {

@@ -104,11 +104,21 @@ input[type="radio"].visually-hidden {
 	}
 }
 
-.link--active {
+.mute {
+	display: none;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+	z-index: 999;
+	background-color: rgba(21, 25, 29, 0.8);
+}
+
+.main-nav__item a.link--active {
 	color: #186490;
 }
 
 .blue-button {
+	position: relative;
 	box-sizing: border-box;
 	width: 211px;
 	border: none;
@@ -123,6 +133,14 @@ input[type="radio"].visually-hidden {
 	color: #ffffff;
 	background-color: #186490;
 	cursor: pointer;
+	
+	&::before {
+		content: url(../../img/svg/arow_right.svg);
+		position: absolute;
+		display: none;
+		top: 35%;
+		right: 5%;
+	}
 
 	&:active {
 		background-color: #0C4D73;
@@ -130,6 +148,13 @@ input[type="radio"].visually-hidden {
 
 	&:disabled {
 		background-color: #E8E8E8;
+	}
+
+	&:hover {
+		text-align: left;
+		&::before {
+			display: block;
+		}
 	}
 }
 
@@ -223,5 +248,45 @@ input[type="radio"].visually-hidden {
 		width: 100%;
 		margin-right: 25px;
 		margin-left: 25px;
+	}
+
+	.wrapper {
+		box-sizing: border-box;
+		width: 100%;
+		padding-right: 25px;
+		padding-left: 25px;
+	}
+
+	.h3-title.serch-result__title {
+		margin-top: 35px;
+		margin-bottom: 45px;
+		width: 100%;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+	.h3-title {
+		font-size: 18px;
+		line-height: 20px;
+		letter-spacing: 0.1px;
+	}
+
+	.h4-title {
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	.subtitle-1 {
+		font-size: 12px;
+		line-height: 16px;
+	}
+
+	.body-1 {
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	.mobile-hidden {
+		display: none;
 	}
 }

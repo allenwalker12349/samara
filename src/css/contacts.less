@@ -12,12 +12,141 @@
 	line-height: 54px;
 	letter-spacing: 0.2px;
 	color: #15191D;
+	margin-top: 10px;
+	margin-bottom: 75px;
+}
+
+.contacts__title a {
+	position: relative;
+	top: 42px;
+	right: 55px;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: right;
+	letter-spacing: 0.1px;
+	color: #52575C;
 }
 
 .contacts__time-container {
 	display: flex;
 }
 
+.contacts__time-container .contacts__title {
+	margin-bottom: 0;
+}
+
 .contacts__day {
 	margin-right: 60px;
+}
+
+.contacts__title--align-right {
+	text-align: right;
+}
+
+.contacts__phone-numbers {
+	padding-top: 69px;
+	padding-bottom: 134px;
+	background-color: #F9F9FA;
+}
+
+.contacts__phone-title {
+	margin-bottom: 70px;
+}
+
+.contacts__phone-table {
+	width: 100%;
+	margin-bottom: 110px;
+	border-collapse: collapse;
+}
+
+.contacts__phone-table th,
+.contacts__phone-table td {
+	padding: 18px 51px;
+}
+
+td.contacts__phone-table--num,
+th.contacts__phone-table--num {
+	padding: 0;
+	box-sizing: border-box;
+	width: 122px;
+}
+
+.contacts__phone-table tr:nth-child(even) {
+	background-color: #E8E8E8;
+}
+
+.contacts__phone-table th {
+	text-align: left;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.1px;
+	color: #A0A4A8;
+}
+
+.contacts__phone-table td {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0.1px;
+	color: #15191D;
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+	.contacts__phone-table td {
+		padding: 10px 0;
+		width: 100%;
+		text-align: center;
+	}
+
+	.contacts__phone-table tr{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	
+	.contacts__title a {
+		position: static;
+		display: block;
+		width: 100%;
+		margin-top: 20px;
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	.contacts__title--smal {
+		font-size: 9px;
+		line-height: 11px;
+	}
+
+	.contacts__title {
+		margin-top: 3px;
+		font-size: 20px;
+		line-height: 22px;
+	}
+
+	.contacts__time-container .contacts__title {
+		text-align: right;
+		margin-bottom: 0;
+
+		&:last-child {
+			text-align: left;
+		}
+	}
+
+	.contacts__day {
+		margin-right: 20px;
+	}
+
+	.contacts__title {
+		margin-bottom: 30px;
+	}
+
+	.contacts__phone-table th {
+		display: none;
+	}
+
+	td.contacts__phone-table--num {
+		width: 100%;
+		padding: 18px 51px;
+	}
 }

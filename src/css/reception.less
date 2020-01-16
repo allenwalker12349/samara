@@ -15,6 +15,13 @@
 	&:hover {
 		border: 1px solid #186490;
 	}
+	&:focus {
+		border-color: #52575C;
+		color: #15191D;
+	}
+	&:active {
+		background-color: #E8E8E8;
+	}
 }
 
 .reception__label {
@@ -54,6 +61,7 @@
 	line-height: 24px;
 	letter-spacing: 0.1px;
 	color: #52575C;
+	width: 312px;
 }
 
 .reception__personal input,
@@ -76,6 +84,10 @@
 	color: #A0A4A8;
 }
 
+.reception__personal-conainer {
+	position: relative;
+}
+
 .reception__personal-conainer,
 .reception__contacts-conainer {
 	display: flex;
@@ -84,7 +96,7 @@
 	width: 673px;
 
 	& input:last-child {
-		flex-grow: 1;
+		width: 100%;
 	}
 }
 
@@ -140,7 +152,6 @@
 	font-weight: 300;
 	font-size: 52px;
 	line-height: 54px;
-	/* or 104% */
 	display: flex;
 	align-items: center;
 	letter-spacing: 0.2px;
@@ -178,4 +189,257 @@
 	line-height: 16px;
 	letter-spacing: 0.2px;
 	color: #ffffff;
+}
+
+.reception__personal-conainer span {
+	width: 326px;
+}
+
+.reception__personal-conainer span:last-child {
+	width: 100%;
+}
+
+.reception__contacts,
+.reception__adress-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	width: 673px;
+}
+
+.reception__contacts {
+	margin-bottom: 136px;
+}
+
+.reception__adress-container .reception__input--small{
+	max-width: 210px;
+	margin: 0;
+}
+
+.reception__files-upload {
+	display: none;
+}
+
+.reception__input--photo {
+	&:hover {
+		background-image: none;
+	}
+
+	&:hover ~ svg path {
+		stroke: #ffffff;
+	}
+
+	&:hover ~ svg rect {
+		stroke: #ffffff;
+	}
+}
+
+.reception__upload-item-container {
+	width: 211px;
+	position: relative;
+	margin-right: 20px;
+}
+
+.reception__upload-item-container .links__item {
+	width: 100%;
+	min-height: 129px;
+	padding-right: 60px;
+}
+
+.reception__upload-icon {
+	position: absolute;
+	bottom: 9%;
+	right: 9%;
+}
+
+.reception__files-conainer {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.reception__files-loaded {
+	width: 673px;
+}
+
+.reception__files-loaded-item {
+	display: flex;
+	align-items: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	min-height: 24px;
+}
+
+.loaded-status {
+	width: 16px;
+	height: 16px;
+	margin-right: 10px;
+}
+
+.loaded-icon {
+	margin-right: 10px;
+}
+
+.loaded-del {
+	width: 18px;
+	height: 18px;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	background: url(../../img/svg/del.svg);
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.reception__input-container {
+	position: relative;
+}
+
+.reception__input-container--patronymic,
+.reception__input-container--patronymic input,
+.reception__input-container--patronymic span{
+	width: 100%;
+}
+
+.reception__input:focus::placeholder {
+	transition: all ease;
+	color: transparent;
+}
+
+.reception__label-placeholder {
+	position: absolute;
+  top: 1rem;
+  left: 1.2rem;
+  transition: all .1s ease-in-out;
+	cursor: text;
+	font-size: 14px;
+	line-height: 22px;
+	letter-spacing: 0.1px;
+	color: transparent;
+	padding: 0 2px;
+}
+
+.reception__label-placeholder  {
+	color: transparent;
+}
+
+.reception__input:focus + .reception__label-placeholder {
+  top: -.8rem;
+	background: #F9F9FA;
+	padding: 0 2px;
+	color: #A0A4A8;
+}
+
+
+
+@media (min-width: 320px) and (max-width: 575px) {
+	.reception__adress-container .reception__input-container {
+		width: auto;
+	}
+
+	.reception__input-container {
+		width: 100%;
+	}
+
+	.reception__upload-item-container {
+		margin-right: 0;
+	}
+
+	.reception__label {
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	.loaded-del {
+		margin-left: auto;
+	}
+
+	.reception__files-loaded {
+		width: 100%;
+	}
+
+	.reception__upload-item-container {
+		width: 100%;
+		position: relative;
+	}
+
+	.reception__upload-icon {
+		bottom: 35%;
+		right: 5%;
+	}
+
+	.reception__adress-container .reception__input--small{
+		max-width: 76px;
+		margin: 0;
+	}
+
+	.reception__contacts {
+		width: 100%;
+	}
+
+	.reception__problame-text {
+		width: 100%;
+	}
+
+	.reception__files-conainer .links__item.reception__input {
+		width: 100%;
+		height: 66px;
+		min-height: auto;
+		padding: 15px;
+		margin: 0;
+		margin-bottom: 20px;
+	}
+ 
+	.reception__personal-conainer {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.reception__contacts input, .reception__personal input {
+		width: 100%;
+	}
+
+	.reception__input+.reception__input--small {
+		width: 74px;
+	}
+
+	.reception__submit-container {
+		width: 100%;
+		flex-wrap: wrap;
+	}
+
+	.reception__agree-label {
+		width: 235px;
+	}
+
+	.reception__agree-label,
+	.reception__agree-label a {
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	.reception__submit-btn {
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.reception__success-title {
+		font-size: 20px;
+		line-height: 22px;
+	}
+
+	.reception__success-text {
+		font-size: 12px;
+		line-height: 18px;
+		margin-bottom: 20px;
+	}
+
+	.reception__success-container .blue-button {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+
+	.reception__success-container {
+		padding-bottom: 30px;
+		padding-top: 0;
+	}
 }

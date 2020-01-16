@@ -19,8 +19,7 @@
  .slider__text-content {
 	 position: relative;
 	 width: 630px;
-	 padding-top: 87px;
-	 padding-bottom: 65px;
+	 padding-bottom: 90px;
 	 z-index: 2;
 }
 
@@ -41,6 +40,7 @@
 
 .slider__description {
 	margin-top: 17px;
+	margin-bottom: 40px;
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: 0.1px;
@@ -49,16 +49,17 @@
 }
 
 .slider__text {
-	display: inline-block;
+	display: flex;
+	padding: 16px 0;
+	justify-content: center;
 	transition: all 0.25s;
 }
 
 .slider__button {
 	position: relative;
-	bottom: -5px;
 	overflow: hidden;
 	display: block;
-	padding: 16px 5px;
+	padding: 0 5px;
 
 	width: 200px;
 
@@ -83,6 +84,7 @@
 	&:hover > .slider__text{
 		display: inline-block;
 		transform: translateX(-50px);
+		width: 100%;
 	}
 }
 
@@ -100,27 +102,25 @@
 
 #slider .slick-dots {
 	display: flex;
-	flex-direction: column;
-	width: auto;
-	top: 80px;
-	left: -35px;
+	justify-content: center;
+	position: absolute;
+	bottom: 16px;
 	z-index: 2;
 }
 
 #slider .slick-dots li {
-	height: 35px;
+	padding: 0;
+	width: 4px;
+	height: 4px;
 }
 
 #slider .slick-dots li button:before {
 	content: '';
-	width: 2px;
-	height: 35px;
-	background-color: rgba(255,255,255,0.8);
+	width: 4px;
+	height: 4px;
+	background-color: #FFFFFF;
 }
 
-#slider .slick-dots li button {
-	height: 35px;
-}
 
 #slider .slick-next {
 	right: 0;
@@ -148,18 +148,50 @@
 }
 
 #slider .slick-slide {
+	display: flex;
 	height: 500px;
+}
+
+.slick-slide .wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.progressBarContainer {
+	position: absolute;
+	top: 8px;
+	left: -30px;
+}
+
+.item {
+	width: 2px;
+	height: 90px;
+	background-color: rgba(202, 204, 207, 0.4);
+}
+
+.progressBar {
+	display: flex;
+	width: 100%;
+	height: 1%;
+	background-color: #fff;
 }
 
 
 @media (min-width: 320px) and (max-width: 575px) {
+	.progressBarContainer {
+		display: none;
+	}
 
 	.slider__text-content {
 		width: 270px;
+		padding-bottom: 40px;
+		padding-top: 20px;
 	}
 	
 	.slider__title {
 		width: 270px;
+		margin-bottom: 20px;
 		font-weight: 300;
 		font-size: 20px;
 		line-height: 22px;
@@ -172,15 +204,10 @@
 
 	.slider__button {
 		width: 98%;
-		bottom: -19px;
 	}
 
 	#slider .slick-slide {
 		height: 370px;
-	}
-
-	.slider__text-content {
-		padding-top: 198px;
 	}
 
 	#slider .slick-next {

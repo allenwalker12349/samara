@@ -73,16 +73,19 @@
 				<div class="wrapper">
 					<form class="appointment__form" action="" method="POST">
 
-						<div class="appointment__item">
+						<div class="appointment__item appointment__item--service">
 							<legend class="appointment__legent">01. Выбор услуги</legend>
 							<select class="appointment__select" name="typeOfService" id="typeOfService" required>
-								<option value="value1">Значение 1</option> 
-								<option value="value2" selected>Консультация</option>
+								<option value="value2" selected>Направление работы</option>
 								<option value="value3">Значение 3</option>
 							</select>
-							<label class="appointment__label appointment__label--type" for="typeOfService">Краткое описание услуги в две строки. Краткое описание 
-								услуги в две строки. Краткое описание услуги в две строки.</label>
-							</div>
+
+							<select class="appointment__select" name="service" id="service" required>
+								<option value="value2" selected>Услуга</option>
+								<option value="value3">Значение 3</option>
+							</select>
+						</div>
+							
 
 						<div class="appointment__item">
 							<legend class="appointment__legent">02. Дата и время посещения</legend>
@@ -111,14 +114,30 @@
 
 						<div class="appointment__item appointment__item--personal">
 							<legend class="appointment__legent">03. Личная информация</legend>
-							<input class="appointment__input" type="text" placeholder="Фамилия" required>
-							<input class="appointment__input appointment__input--name" type="text" placeholder="Имя" required>
-							<input class="appointment__input appointment__input--patronymic" type="text" placeholder="Отчество (при наличии)">
+							<div class="reception__input-container">
+								<input class="appointment__input" id="appointment__lastname" type="text" placeholder="Фамилия" required>
+								<label class="reception__label-placeholder" for="appointment__lastname">Фамилия</label>
+							</div>
+
+							<div class="reception__input-container">
+								<input class="appointment__input appointment__input--name" id="appointment__name" type="text" placeholder="Имя" required>
+								<label class="reception__label-placeholder" for="appointment__name">Имя</label>
+							</div>
+
+							<div class="reception__input-container appointment__input-container--patronymic">
+								<input class="appointment__input appointment__input--patronymic" id="appointment__input--patronymic" type="text" placeholder="Отчество (при наличии)">
+								<label class="reception__label-placeholder" for="appointment__input--patronymic">Отчество (при наличии)</label>
+							</div>
+							
+							
 						</div>
 
 						<div class="appointment__item">
 							<legend class="appointment__legent">04. Ваши контакты</legend>
-							<input class="appointment__input" id="appointmentPhoneNumber" type="text" placeholder="Номер телефона" required>
+							<div class="reception__input-container">
+								<input class="appointment__input" id="appointmentPhoneNumber" type="text" placeholder="Номер телефона" required>
+								<label class="reception__label-placeholder" for="appointmentPhoneNumber">Номер телефона</label>
+							</div>
 							<label class="appointment__label appointment__label--phone" for="appointmentPhoneNumber">На указаный номер телефона придет СМС с ФИО специалиста, 
 								номером талона, а также датой и временем приема.
 							</label>

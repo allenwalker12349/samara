@@ -154,6 +154,10 @@ body .ui-button.ui-state-active:hover {
 	border: none;
 }
 
+body .ui-widget.ui-widget-content {
+	border: none;
+}
+
 // табы
 
 main .ui-widget.ui-widget-content {
@@ -178,6 +182,7 @@ main .ui-widget-header {
 }
 
 main .ui-tabs .ui-tabs-panel {
+	width: 100%;
 	padding: 0;
 }
 
@@ -241,5 +246,34 @@ body .ui-selectmenu-menu {
 		
 		::-webkit-scrollbar{
 		width: 4px;
+	}
+}
+
+main .ui-tabs .ui-tabs-nav {
+	margin-bottom: 20px;
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+	body .ui-datepicker .ui-datepicker-next {
+		right: 55px;
+	}
+
+	body .ui-datepicker .ui-datepicker-prev {
+		left: 55px;
+	}
+
+	body .ui-selectmenu-button.ui-button {
+		width: 100%;
+		margin: 0;
+	}
+
+	.latest-news .ui-tabs .ui-tabs-nav li {
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	body .ui-datepicker {
+		width: 265px;
 	}
 }

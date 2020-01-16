@@ -86,3 +86,35 @@
 	line-height: 14px;
 	letter-spacing: 0.2px;
 }
+
+@media (max-width: 1140px) {
+	.account {
+		padding-top: 30px;
+		padding-bottom: 60px;
+	}
+
+	.account__log-out-container {
+		display: none;
+	}
+
+	.account .wrapper {
+		flex-wrap: wrap;
+	}
+
+	.account__item-link {
+		font-size: 12px;
+		line-height: 18px;
+		padding: 15px;
+	}
+
+	.account__item {
+		margin-bottom: 20px;
+	}
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+	.account__item {
+		width: 100%;
+		height: 66px;
+	}
+}

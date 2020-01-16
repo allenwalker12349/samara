@@ -86,7 +86,8 @@
 }
 
 .infromation__img-container {
-	margin-bottom: 30px;
+	padding-bottom: 30px;
+	background-color: #F9F9FA;
 }
 
 .slider__item--important-information {
@@ -122,16 +123,14 @@
 .slider__text-content--important-information {
 	position: relative;
 	width: 630px;
-	padding-top: 100px;
 	z-index: 2;
+	padding-bottom: 134px;
+	padding-top: 20px;
 }
 
 .slider__text-content--important-information .slider__description {
 	margin-top: 25px;
-}
-
-.slider__text-content--important-information .slider__button {
-	bottom: -70px;
+	margin-bottom: 60px;
 }
 
 .important-information__title-container--dots-anchor .slick-dots {
@@ -148,8 +147,39 @@
 }
 
 .infromation__img-container .slider__item--important-information {
-	max-height: 550px;
+	height: 550px;
+	display: flex;
 }
+
+.infromation__img-container .slider__item--important-information .wrapper {
+	justify-content: flex-end;
+}
+
+.slider__important-information .slick-dots {
+	display: flex;
+	justify-content: center;
+	position: absolute;
+	bottom: 16px;
+	z-index: 2;
+}
+
+.slider__important-information .slick-dots li {
+	padding: 0;
+	width: 4px;
+	height: 4px;
+}
+
+.slider__important-information .slick-dots li button:before {
+	content: '';
+	width: 4px;
+	height: 4px;
+	background-color: #FFFFFF;
+}
+
+.infromation__img-container-img-container .slick-initialized .slick-slide {
+	display: flex;
+}
+
 
 @media (max-width: 1140px) {
 	.wrapper.important-information__arrow-anchor {
@@ -176,17 +206,22 @@
 		max-height: 515px;
 	}
 
+	.infromation__img-container-img-container {
+		height: auto;
+	}
+
 	.slider__item--important-information {
 		background-position: center;
 	}
 
 	.slider__text-content--important-information {
-		padding-top: 275px;
+		padding-top: 20px;
+		padding-bottom: 40px;
 		width: 100%;
 	}
 
 	.infromation__img-container .slider__button {
-		bottom: -50px;
+		bottom: -5px;
 	}
 
 	.infromation__img-container .slider__description {
@@ -194,6 +229,8 @@
 		width: 100%;
 		padding-top: 10px;
 		margin: 0;
+		margin-bottom: 25px;
+		margin-top: 10px;
 		font-size: 12px;
 		line-height: 18px;
 	}
